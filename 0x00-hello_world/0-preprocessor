@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Useless text here"
+gcc $CFILE -o c

@@ -2,11 +2,11 @@
 
 /**
  * my_puts - Prints a string using puts()
- * @str: the string to be returned
  *
- * Return: String that is returned
+ * Return: the intended string
  */
-void my_puts(str)
+
+int my_puts(void)
 {
 	puts("Programming is like building a multilingual puzzle");
 	return (0);

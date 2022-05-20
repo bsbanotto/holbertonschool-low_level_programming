@@ -5,7 +5,7 @@
  * @c - character
  * @i - integer
  * @l - long integer
- * @L - long long integer
+ * @ll - long long integer
  * @f - float
  *
  * Return: 0 if it works

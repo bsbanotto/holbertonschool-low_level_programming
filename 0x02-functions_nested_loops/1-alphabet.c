@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - prints "_putchar" followed by a new line
+ * print_alphabet - prints the lowercase alphabet
  *
  * Return: 0 when successful
  */

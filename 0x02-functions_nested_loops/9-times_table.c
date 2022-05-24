@@ -3,8 +3,8 @@
 /**
  * times_table - prints out the 9's times table....hopefully
  *
- * variable n1 is first operator
- * variable n2 is second operator
+ * variable rownum is the row number
+ * variable colnum is the column number
  * p is the product
  *
  * counting with _putchar is terrible once you go past one digit
@@ -17,42 +17,34 @@
  */
 void times_table(void)
 {
-	int n1;
-	int n2;
+	int rownum;
+	int colnum;
 	int p;
 
-	for (n1 = 0; n1 <= 9; n1++)
+	for (rownum = 0; rownum <= 9; rownum++)
 	{
-		for (n2 = 0; n2 <= 9; n2++)
+		_putchar('0');
+		_putchar(',');
+		_putchar(' ');
+		for (colnum = 1; colnum <= 9; colnum++)
 		{
-			p = n1 * n2;
-			if ((p / 10 == 0) && (p % 10 == 0))
+			p = rownum * colnum;
+			if ((p / 10) > 0)
 			{
-				_putchar((p % 10) + '0');
-				_putchar(',');
-				_putchar(' ');
-				if (n2 <= 9)
-				{
-					_putchar(' ');
-					_putchar((p % 10) + '0');
-					_putchar(',');
-					_putchar(' ');
-				}
+				_putchar((p / 10) + '0');
 			}
 			else
 			{
-				_putchar((p / 10) + '0');
-				_putchar((p % 10) + '0');
-				if (n2 < 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
+				_putchar(' ');
 			}
-			if (n2 == 9)
+			_putchar((p % 10) + '0');
+
+			if (colnum < 9)
 			{
-				_putchar('\n');
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
+		_putchar('\n');
 	}
 }

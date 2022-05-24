@@ -13,6 +13,12 @@
  * the first character is 53 / 10 - which is equal to 5 in integer division
  * the second character is 53 % 10 - which is equal to 3 in modulus division
  *
+ * To build our table
+ * First, for the zeroth row, give us a 0 , and ' '
+ * Second, for every column, multiply the grid space, row * column
+ * IF this is a single digit number, put in a space
+ * If it's a two digit number, put in the tens place followed by the remainder
+ * Lastly, for all columns but the last, we need a ', ' after each modulus
  * Return: void
  */
 void times_table(void)
@@ -29,13 +35,13 @@ void times_table(void)
 		for (colnum = 1; colnum <= 9; colnum++)
 		{
 			p = rownum * colnum;
-			if ((p / 10) > 0)
+			if ((p / 10) == 0)
 			{
-				_putchar((p / 10) + '0');
+				_putchar(' ');
 			}
 			else
 			{
-				_putchar(' ');
+				_putchar((p / 10) + '0');
 			}
 			_putchar((p % 10) + '0');
 

@@ -28,8 +28,11 @@ void times_table(void)
 			p = n1 * n2;
 			_putchar((p / 10) + '0');
 			_putchar((p % 10) + '0');
+			if (n2 < 9)
+			{
 			_putchar(',');
 			_putchar(' ');
+			}
 			if (n2 == 9)
 			{
 				_putchar('\n');

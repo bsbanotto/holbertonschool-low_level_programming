@@ -7,7 +7,7 @@
  * Return: 0 when successful
  */
 
-int main(int i)
+int main(void)
 {
 	int sum;
 

@@ -14,29 +14,20 @@ int main(void)
 {
 	int f;
 	int s;
-	int t;
-	int l;
 
-	for (f = 0; f <= 5; f++)
+	for (f = 0; f <= 98; f++)
 	{
-		for (s = 0; s <= 5; s++)
+		for (s = f + 1; s <= 99; s++)
 		{
-			for (t = 0; t <= 5; t++)
+			putchar((f / 10) + '0');
+			putchar((f % 10) + '0');
+			putchar(' ');
+			putchar((s / 10) + '0');
+			putchar((s % 10) + '0');
+			if (f < 98)
 			{
-				for (l = 1; l <= 5; l++)
-				{
-					putchar(f + '0');
-					putchar(s + '0');
-					putchar(' ');
-					putchar(t + '0');
-					putchar(l + '0');
-
-					if (f == 9 && s == 9 && t == 9 && l == 9)
-						break;
-
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}

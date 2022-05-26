@@ -2,6 +2,7 @@
 /**
  * print_times_table - prints out the times table....hopefully
  * @n: is the provided upper limit
+ *
  * Return: void
  */
 void print_times_table(int n)

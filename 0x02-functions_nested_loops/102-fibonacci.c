@@ -13,7 +13,7 @@ int main(void)
 	num2 = 2;
 
 	printf("1, 2, ");
-	for (i =0; i < 47; i++)
+	for (i = 0; i < 47; i++)
 	{
 		fib = num1 + num2;
 		printf("%ld, ", fib);

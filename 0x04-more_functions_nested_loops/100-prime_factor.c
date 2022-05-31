@@ -11,29 +11,27 @@
 
 int main(void)
 {
-	long num, i, j, prime;
+	long num, factor, primeFactor, primeReturn;
 
 	num = 612852475143;
-	prime = 1;
+	primeReturn = 1;
 
-	for (i = 2; i <= num / 2; i++)
+	for (factor = 2; factor <= num / 2; factor++)
 	{
-		if (num % i == 0) /* True when number is a factor */
+		if (num % factor == 0)
 		{
-			/*printf("%ld\n", i);  Prints all factors */
-			for (j = 2; j < i / 2; j++)
+			for (primeFactor = 2; primeFactor < factor / 2; primeFactor++)
 			{
-				if (i % j == 0)
+				if (factor % primeFactor == 0)
 				{
-					if (j > prime)
+					if (primeFactor > primeReturn)
 					{
-						prime = j;
+						primeReturn = primeFactor;
 					}
-					/*printf("%ld\n", prime); */
 				}
 			}
 		}
 	}
-	printf("%ld\n", prime);
+	printf("%ld\n", primeReturn);
 	return (0);
 }

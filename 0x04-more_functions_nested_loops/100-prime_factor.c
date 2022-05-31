@@ -11,23 +11,29 @@
 
 int main(void)
 {
-	long num, factor, primeFactor, primeReturn;
+	long i, j, num, isPrime, primeReturn;
 
 	num = 612852475143;
 	primeReturn = 1;
 
-	for (factor = 2; factor <= num / 2; factor++)
+	for (i = 2; i <= num / 2; i++)
 	{
-		if (num % factor == 0)
+		if (num % i == 0)
 		{
-			for (primeFactor = 2; primeFactor < factor / 2; primeFactor++)
+			isPrime = 1;
+			for (j = 2; j <= i / 2; j++)
 			{
-				if (factor % primeFactor == 0)
+				if (i % j == 0)
 				{
-					if (primeFactor > primeReturn)
-					{
-						primeReturn = primeFactor;
-					}
+					isPrime = 0;
+					break;
+				}
+			}
+			if (isPrime == 1)
+			{
+				if (i > primeReturn)
+				{
+					primeReturn = i;
 				}
 			}
 		}

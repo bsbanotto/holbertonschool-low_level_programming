@@ -3,22 +3,24 @@
 /**
  * main - prints largest prime of 612852475143
  * num: Number provided
- * i: All factors
- * j: Prime factor counter
- * primeNum: prime numbers
+ * i: counter for all factors
+ * j: counter for prime factors
+ * number: provided number
+ * isPrime: 1 if prime, 0 if not prime
+ * primeReturn: Largest prime
  * Return: 0 when successful
  */
 
 int main(void)
 {
-	long i, j, num, isPrime, primeReturn;
+	long i, j, number, isPrime, primeReturn;
 
-	num = 612852475143;
+	number = 612852475143;
 	primeReturn = 1;
 
-	for (i = 2; i <= num / 2; i++)
+	for (i = 2; i <= number / 2; i++)
 	{
-		if (num % i == 0)
+		if (number % i == 0)
 		{
 			isPrime = 1;
 			for (j = 2; j <= i / 2; j++)

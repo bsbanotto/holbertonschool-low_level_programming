@@ -4,6 +4,7 @@
  * rev_string - Reverses a string
  * @s: provided string
  *
+ * for loop in while statement, flips characters on either end of the string
  * Return: Void
  */
 

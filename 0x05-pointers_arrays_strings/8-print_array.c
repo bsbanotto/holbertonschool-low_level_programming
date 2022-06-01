@@ -19,11 +19,11 @@ void print_array(int *a, int n)
 	{
 		len++;
 	}
-	for (i = 0; i < n - 1 ; i++)
+	for (i = 0; i < n - 1; i++)
 	{
 		printf("%d, ", a[i]);
 	}
-	for ( i = n - 1; i < n; i++)
+	for (i = n - 1; i < n; i++)
 	{
 		printf("%d\n", a[i]);
 	}

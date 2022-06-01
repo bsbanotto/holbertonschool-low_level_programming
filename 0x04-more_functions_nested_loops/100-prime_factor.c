@@ -15,7 +15,7 @@ int main(void)
 {
 	long i, j, number, isPrime, primeReturn;
 
-	number = 612852475143;
+	number = 61285247514;
 	primeReturn = 1;
 
 	for (i = 2; i <= number / 2; i++)

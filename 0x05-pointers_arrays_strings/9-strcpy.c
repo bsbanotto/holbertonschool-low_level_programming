@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * *_strcpy - Function to copy string pointed to by src to dest
  *
@@ -16,8 +16,8 @@ char *_strcpy(char *dest, char *src)
 	while (*src != '\0')
 	{
 		*dest = *src;
-		dest++;
 		src++;
+		dest++;
 	}
 
 	*dest = '\0';

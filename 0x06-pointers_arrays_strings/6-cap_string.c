@@ -11,6 +11,9 @@ char *cap_string(char *s)
 {
 	int i = 0;
 
+	if (s[0] >= 'a' && s[0] <= 'z')
+		s[0] -= 32;
+
 	while (s[i])
 	{
 		switch (s[i - 1])

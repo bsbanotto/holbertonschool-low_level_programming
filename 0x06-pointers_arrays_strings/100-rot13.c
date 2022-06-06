@@ -9,12 +9,11 @@
 
 char *rot13(char *s)
 {
-	char *c1, *c2;
 	int j, i;
 
-	c1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	c2 = "nopqrstuvwxyzabcdefghilklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-
+	char c1[] = {'a', 'b', 'c', 'A', 'B', 'C'};
+	char c2[] = {'n', 'o', 'p', 'N', 'O', 'P'};
+	
 	i = 0;
 	while (s[i])
 	{

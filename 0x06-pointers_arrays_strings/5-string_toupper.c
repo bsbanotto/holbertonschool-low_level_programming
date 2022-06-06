@@ -2,7 +2,8 @@
 
 /**
  * *string_toupper - Function to convert all lowercase letters to upper case
- * @s: Give string
+ * @s: Given string
+ *
  * Return: Uppercase string
  */
 

@@ -28,8 +28,6 @@ char *rot13(char *s)
 			j++;
 		}
 		i++;
-		j = 0;
-	}
-	i = 0;
+       	}
 	return (s);
 }

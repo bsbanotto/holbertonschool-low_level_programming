@@ -2,8 +2,8 @@
 
 /**
  * _my_sqrt - Allows two int inputs for square root
- * @k: counter
- * @n: integer
+ * @k: factors of integer
+ * @n: provided integer from _sqrt_recursion function
  *
  * Return: Square root
  */
@@ -14,14 +14,14 @@ int _my_sqrt(long k, int n)
 
 	if (k * k == n)
 	{
-		return k;
+		return (k);
 	}
-	if (k * k < n && (k+1) * ( k+1) > n)
+	if (k * k < n && (k + 1) * (k + 1) > n)
 	{
 		return (-1);
 	}
 	else
-		return _my_sqrt(next_k, n);
+		return (_my_sqrt(next_k, n));
 }
 
 /**

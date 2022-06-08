@@ -29,7 +29,7 @@ char *_strstr(char *haystack, char *needle)
 			test++;
 		}
 	}
-	if (test >= needleLen)
+	if (test <= needleLen)
 		return (needle);
 	else
 		return (NULL);

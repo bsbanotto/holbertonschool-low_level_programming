@@ -1,7 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include "2-strlen.c"
-#include <stddef.h>
 
 /**
  * _puts_recursion - Prints the given string followed by new line
@@ -12,21 +10,14 @@
 
 void _puts_recursion(char *s)
 {
-	int len = _strlen(s);
-	int pos = 0;
-
-	_putchar(s[pos]);
-
-	if (pos == len - 1)
+	if(*s != '\0')
+	{
+		_putchar(*s);
+		s++;
+		_puts_recursion(s);
+	}
+	else
 	{
 		_putchar('\n');
-	}
-	if (pos < len - 1)
-	{
-		_puts_recursion(s + 1);
-	}
-	if (len == 0)
-	{
-		_putchar(s[0]);
 	}
 }

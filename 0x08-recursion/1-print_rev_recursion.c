@@ -22,6 +22,6 @@ void _print_rev_recursion(char *s)
 	}
 	if (pos < len - 1)
 	{
-		_puts_recursion(s - 1);
+		_print_rev_recursion(s - len);
 	}
 }

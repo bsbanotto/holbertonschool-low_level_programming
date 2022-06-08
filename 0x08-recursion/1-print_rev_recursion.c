@@ -1,19 +1,18 @@
 #include "main.h"
 #include <stdio.h>
 #include "2-strlen.c"
-#include <stddef.h>
 
 /**
- * _puts_recursion - Prints the given string followed by new line
+ * _print_rev_recursion - Prints the given string followed by new line
  * @s: Provided string
  *
  * Return: void
  */
 
-void _puts_recursion(char *s)
+void _print_rev_recursion(char *s)
 {
 	int len = _strlen(s);
-	int pos = 0;
+	int pos = len;
 
 	_putchar(s[pos]);
 
@@ -23,8 +22,6 @@ void _puts_recursion(char *s)
 	}
 	if (pos < len - 1)
 	{
-		_puts_recursion(s + 1);
+		_puts_recursion(s - 1);
 	}
-	if (len == 0)
-	{};
 }

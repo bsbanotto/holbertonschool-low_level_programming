@@ -12,7 +12,7 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, needleLen, hayLen, test;
+	int i, j, needleLen, hayLen;
 
 	needleLen = _strlen(needle);
 	hayLen = _strlen(haystack);
@@ -20,19 +20,14 @@ char *_strstr(char *haystack, char *needle)
 	if (hayLen < needleLen)
 		return (NULL);
 
-	test = 0;
-
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
 		for (j = 0; needle[j] != '\0' && needle[j] == haystack[i + j]; j++)
 		{
-			test++;
+			return (haystack + i);
 		}
 	}
-	if (test >= needleLen)
-		return (&haystack[hayLen - needleLen]);
-	else
-		return (NULL);
+	return (NULL);
 }
 
 /**

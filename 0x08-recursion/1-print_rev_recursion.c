@@ -11,17 +11,9 @@
 
 void _print_rev_recursion(char *s)
 {
-	int len = _strlen(s);
-	int pos = len;
-
-	_putchar(s[pos]);
-
-	if (pos == len - 1)
+	if (*s)
 	{
-		_putchar('\n');
-	}
-	if (pos < len - 1)
-	{
-		_print_rev_recursion(s - len);
+		_print_rev_recursion(s + 1);
+		_putchar(*s);
 	}
 }

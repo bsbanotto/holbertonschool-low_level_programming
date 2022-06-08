@@ -3,16 +3,17 @@
 #include <stddef.h>
 
 /**
- * _strstr - Returns a matching substring
+ * _strstr - Locates a matching substring within a string
+ *
  * @haystack: Where we're searching
  * @needle: What we're looking for
  *
- * Return: Count of matching characters
+ * Return: Entire string starting where substring matched
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, needleLen, hayLen;
+	int i, j, needleLen, hayLen, placeInHaystack;
 
 	needleLen = _strlen(needle);
 	hayLen = _strlen(haystack);
@@ -22,9 +23,12 @@ char *_strstr(char *haystack, char *needle)
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		for (j = 0; needle[j] != '\0' && needle[j] == haystack[i + j]; j++)
+		placeInHaystack = i;
+		for (j = 0; needle[j] != '\0' && needle[j] == haystack[i]; j++)
 		{
-			return (haystack + i);
+			if (j == needleLen - 1)
+				return (haystack + placeInHaystack);
+			i++;
 		}
 	}
 	return (NULL);

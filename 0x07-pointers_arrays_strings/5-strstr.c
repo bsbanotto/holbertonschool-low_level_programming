@@ -13,39 +13,22 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, needleLen, hayLen, placeInHaystack;
+	int i, j;
 
-	needleLen = _strlen(needle);
-	hayLen = _strlen(haystack);
+	i = 0;
 
-	if (hayLen < needleLen)
-		return (NULL);
-
-	for (i = 0; haystack[i] != '\0'; i++)
+	while (*(haystack + i))
 	{
-		placeInHaystack = i;
-		for (j = 0; needle[j] != '\0' && needle[j] == haystack[i]; j++)
+		j = 0;
+		while (*(needle + j))
 		{
-			if (j == needleLen - 1)
-				return (haystack + placeInHaystack);
-			i++;
+			if (*(needle + j) != *(haystack + i + j))
+				break;
+			j++;
 		}
+		if (*(needle + j) == '\0')
+			return (haystack + i);
+		i++;
 	}
 	return (NULL);
-}
-
-/**
- * _strlen - Returns the integer length of a string
- * @s: Supplied string
- *
- * Return: Length of string
- */
-
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{}
-	return (i);
 }

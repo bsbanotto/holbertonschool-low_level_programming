@@ -29,8 +29,8 @@ char *_strstr(char *haystack, char *needle)
 			test++;
 		}
 	}
-	if (test <= needleLen)
-		return (needle);
+	if (test == needleLen)
+		return (&haystack[hayLen - needleLen]);
 	else
 		return (NULL);
 }

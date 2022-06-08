@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include "2-strlen.c"
 
 /**
  * _puts_recursion - Prints the given string followed by new line
@@ -23,22 +24,4 @@ void _puts_recursion(char *s)
 	{
 		_putchar('\n');
 	}
-}
-
-
-
-/**
- * _strlen - Returns the length of a string
- * @s: Provided string
- *
- * Return: String length
- */
-
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{};
-	return (i);
 }

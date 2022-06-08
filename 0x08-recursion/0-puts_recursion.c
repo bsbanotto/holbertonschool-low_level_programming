@@ -16,11 +16,11 @@ void _puts_recursion(char *s)
 
 	_putchar(s[pos]);
 
-	if (pos < len)
+	if (pos < len - 1)
 	{
 		_puts_recursion(s + 1);
 	}
-	if (pos == len)
+	if (pos == len - 1)
 	{
 		_putchar('\n');
 	}

@@ -9,21 +9,21 @@
 
 char *rot13(char *s)
 {
-	char *c1, *c2;
+	char *searcharray, *returnarray;
 	int j, i;
 
-	c1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ(\")- ";
-	c2 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM(\")- ";
+	searcharray = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	returnarray = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	i = 0;
-	while (s[i])
+	while (searcharray[i])
 	{
 		j = 0;
-		while (c1[j])
+		while (s[j])
 		{
-			if (s[i] == c1[j])
+			if (s[j] == searcharray[i])
 			{
-				s[i] = c2[j];
+				s[j] = returnarray[i];
 			}
 			j++;
 		}

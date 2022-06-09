@@ -16,14 +16,14 @@ char *rot13(char *s)
 	returnarray = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	i = 0;
-	while (searcharray[i])
+	while (s[i])
 	{
 		j = 0;
-		while (s[j])
+		while (searcharray[j])
 		{
-			if (s[j] == searcharray[i])
+			if (s[i] == searcharray[j])
 			{
-				s[j] = returnarray[i];
+				s[i] = returnarray[j];
 			}
 			j++;
 		}

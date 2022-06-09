@@ -13,7 +13,7 @@ char *rot13(char *s)
 	int j, i;
 
 	searcharray = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	returnarray = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	retarray = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	i = 0;
 	while (s[i])
@@ -23,7 +23,7 @@ char *rot13(char *s)
 		{
 			if (s[i] == searcharray[j])
 			{
-				s[i] = returnarray[j];
+				s[i] = retarray[j];
 			}
 			j++;
 		}

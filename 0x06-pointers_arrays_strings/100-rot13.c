@@ -9,7 +9,7 @@
 
 char *rot13(char *s)
 {
-	char *searcharray, *returnarray;
+	char *searcharray, *retarray;
 	int j, i;
 
 	searcharray = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";

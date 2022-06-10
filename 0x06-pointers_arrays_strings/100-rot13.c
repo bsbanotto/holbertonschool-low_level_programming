@@ -13,7 +13,7 @@ char *rot13(char *s)
 	int j, i;
 
 	searcharray = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	retarray = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	retarray = "nopqrstuvwxyzabcdefghilklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	i = 0;
 	while (s[i])

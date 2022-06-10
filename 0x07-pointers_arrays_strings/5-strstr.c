@@ -13,22 +13,35 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+	const char *a;
+	const char *b;
 
-	i = 0;
+	b = needle;
 
-	while (*(haystack + i))
+	if (*b == 0)
 	{
-		j = 0;
-		while (*(needle + j))
+		return (haystack);
+	}
+
+	for ( ; *haystack != 0; haystack++)
+	{
+		if (*haystack != *b)
 		{
-			if (*(needle + j) != *(haystack + i + j))
-				break;
-			j++;
+			continue;
 		}
-		if (*(needle + j) == '\0')
-			return (haystack + i);
-		i++;
+		a = haystack;
+		while (1)
+		{
+			if (*b == 0)
+			{
+				return (haystack);
+			}
+			if (*a++ != *b++)
+			{
+				break;
+			}
+		}
+		b = needle;
 	}
 	return (NULL);
 }

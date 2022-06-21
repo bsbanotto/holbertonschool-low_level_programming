@@ -15,7 +15,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, j;
-	char *ar;
+	char *ar, *junk;
 
 	if (s2 == NULL)
 	{
@@ -47,8 +47,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	ar[i + j] = '\0';
-
-	char *junk;
 
 	junk = malloc(5);
 	free(junk);

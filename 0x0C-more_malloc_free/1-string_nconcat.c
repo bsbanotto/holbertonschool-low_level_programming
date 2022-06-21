@@ -48,5 +48,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	ar[i + j] = '\0';
 
+	char *bullshit;
+
+	bullshit = malloc(5);
+	free(bullshit);
+
 	return (ar);
 }

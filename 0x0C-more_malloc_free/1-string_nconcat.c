@@ -25,12 +25,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s1 = "";
 	}
-	if (s1 == NULL && s2 == NULL)
-	{
-		ar = malloc(1);
-		ar[0] = '\0';
-		return (ar);
-	}
 	if (n >= strlen(s2))
 	{
 		n = strlen(s2);

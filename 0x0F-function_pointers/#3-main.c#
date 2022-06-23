@@ -4,7 +4,7 @@
 
 /**
  * main - Main function to do math
- * @argc: Input from user: execution, int, operator, int
+ * @argc: Input count from user: execution, int, operator, int
  * @argv: Vector to argument array
  *
  * Return: 0 on success, exit code on different failures

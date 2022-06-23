@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 /**
- * int index - searches for first occurrance of a specified int
+ * int_index - searches for first occurrance of a specified int
  * @size: Number of elements in the array
  * @cmp: Pointer to function to compare values
  * @array: Array to search in

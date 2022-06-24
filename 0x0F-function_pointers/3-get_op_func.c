@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stddef.h>
+#include <string.h>
 
 /**
  * get_op_func - Returns pointer to function that corresponds to given operator
@@ -21,6 +22,11 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
+
+	if (strlen(s) != 1)
+	{
+		return (NULL);
+	}
 
 	while (ops[i].op != NULL && s[0] != ops[i].op[0])
 		i++;

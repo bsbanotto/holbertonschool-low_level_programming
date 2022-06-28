@@ -70,6 +70,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i, j;
 	va_list list;
+	char *separator = "";
 
 	chosen_type data_type[] = {
 		{'c', print_char},
@@ -89,8 +90,9 @@ void print_all(const char * const format, ...)
 		{
 			if (data_type[i].option == format[j])
 			{
-				printf(", ");
+				printf("%s", separator);
 				data_type[i].func(list);
+				separator = ", ";
 			}
 			i++;
 		}

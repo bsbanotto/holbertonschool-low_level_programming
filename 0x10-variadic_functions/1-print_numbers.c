@@ -6,7 +6,7 @@
 /**
  * print_numbers - prints given numbers followed by new line
  * @separator: String to separate each number
- * @n: arbitrary quantity of integers
+ * @n: defined quantity of integers
  *
  * Return: void
  */

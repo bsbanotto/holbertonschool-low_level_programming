@@ -1,6 +1,7 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 
+#include <stdarg.h>
 
 /* Prototypes */
 
@@ -13,5 +14,18 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
 int _putchar(char c);
+
+
+/**
+ * struct choice - Choice structure
+ * @option: letter passed in first argument
+ * @func: pointer to appropriate function
+ */
+
+typedef struct choice
+{
+	char option;
+	void (*func)(va_list);
+} chosen_type;
 
 #endif

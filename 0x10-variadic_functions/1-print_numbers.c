@@ -23,14 +23,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 		if (separator == NULL)
 		{
-			for (i = 1; i < n; i++)
+			for (i = 0; i < n; i++)
 			{
 				printf("%d", va_arg(numbers, int));
 			}
 		}
 		if (separator != NULL)
 		{
-			for (i = 1; i < n; i++)
+			for (i = 0; i < n; i++)
 			{
 				printf("%d%s", va_arg(numbers, int), separator);
 			}

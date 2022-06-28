@@ -25,19 +25,19 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			for (i = 1; i < n; i++)
 			{
-				printf("%d", va_arg(numbers, int));
+				printf("%d", va_arg(numbers, unsigned int));
 			}
 		}
 		if (separator != NULL)
 		{
 			for (i = 1; i < n; i++)
 			{
-				printf("%d%s", va_arg(numbers, int), separator);
+				printf("%d%s", va_arg(numbers, unsigned int), separator);
 			}
 		}
 		for (i = n; i <= n; i++)
 		{
-			printf("%d\n", va_arg(numbers, int));
+			printf("%d\n", va_arg(numbers, unsigned int));
 		}
 
 		va_end(numbers);

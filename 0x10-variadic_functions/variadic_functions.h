@@ -22,10 +22,10 @@ int _putchar(char c);
  * @func: pointer to appropriate function
  */
 
-typedef struct choice
+typedef struct choiceStruct
 {
-	char option;
+	char choice1;
 	void (*func)(va_list);
-} chosen_type;
+} choiceStruct;
 
 #endif

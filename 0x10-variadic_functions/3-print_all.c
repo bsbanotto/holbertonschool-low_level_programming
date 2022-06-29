@@ -74,7 +74,7 @@ void print_all(const char * const format, ...)
 	va_list list;
 	char *separator = "";
 
-	chosen_type data_type[] = {
+	choiceStruct data_type[] = {
 		{'c', print_char},
 		{'i', print_int},
 		{'f', print_float},
@@ -84,21 +84,21 @@ void print_all(const char * const format, ...)
 
 	va_start(list, format);
 
-	j = 0;
-	while (format != NULL && format[j] != '\0')
+	i = 0;
+	while (format != NULL && format[i] != '\0')
 	{
-		i = 0;
-		while (data_type[i].option != '\0')
+		j = 0;
+		while (j < 4)
 		{
-			if (data_type[i].option == format[j])
+			if (data_type[j].choice1 == format[i])
 			{
 				printf("%s", separator);
-				data_type[i].func(list);
+				data_type[j].func(list);
 				separator = ", ";
 			}
-			i++;
+			j++;
 		}
-		j++;
+		i++;
 	}
 	va_end(list);
 	printf("\n");

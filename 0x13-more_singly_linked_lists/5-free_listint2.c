@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_listint - Frees singly linked integer list
+ * free_listint2 - Frees singly linked integer list
  * @head: pointer to head
  *
  * Return: Void

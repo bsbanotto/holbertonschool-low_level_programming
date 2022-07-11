@@ -2,6 +2,8 @@
 #define LIST_H
 
 #include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /* Data Structure */
 

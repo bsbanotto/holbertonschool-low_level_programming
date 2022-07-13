@@ -14,10 +14,10 @@ void print_binary(unsigned long int n)
 
 	while (copy > 0)
 	{
-		len ++;
+		len++;
 		copy >>= 1;
 	}
-	
+
 	if (len > 0)
 		place_holder = place_holder << len;
 
@@ -27,7 +27,7 @@ void print_binary(unsigned long int n)
 			_putchar('1');
 		else
 			_putchar('0');
-		
+
 		place_holder >>= 1;
 	}
 }

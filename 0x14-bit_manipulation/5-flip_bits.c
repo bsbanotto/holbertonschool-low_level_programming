@@ -2,7 +2,7 @@
 
 /**
  * bits_in_ulint - Counts bits in provided unsigned long ints
- * @ulint: provided unsigned long int
+ * @n: provided unsigned long int
  *
  * Return: Count of bits in provided unsigned long int
  */
@@ -10,6 +10,7 @@
 int bits_in_ulint(unsigned long int n)
 {
 	int count = 0;
+
 	while (n > 0)
 	{
 		count++;

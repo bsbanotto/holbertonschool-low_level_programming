@@ -4,6 +4,7 @@
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 /* Data Structure */
 
@@ -46,5 +47,7 @@ int sum_listint(listint_t *head);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
+
+listint_t *find_listint_loop(listint_t *head);
 
 #endif

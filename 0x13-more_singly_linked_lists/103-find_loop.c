@@ -17,15 +17,15 @@ listint_t *find_listint_loop(listint_t *head)
 		fast = fast->next->next;
 		slow = slow->next;
 		if (slow == fast)
+		{
+			fast = head;
+			while (fast != slow)
 			{
-				fast = head;
-				while(fast != slow)
-				{
-					fast = fast->next;
-					slow = slow->next;
-				}
-				return (fast);
+				fast = fast->next;
+				slow = slow->next;
 			}
+			return (fast);
+		}
 	}
 	return (NULL);
 }

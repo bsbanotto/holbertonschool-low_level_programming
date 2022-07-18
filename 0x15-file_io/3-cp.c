@@ -96,11 +96,15 @@ int main(int argc, char *argv[])
 	mode_t permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	test_num_args(argc);
+
 	fd_from = open(argv[1], O_RDONLY);
 	test_file_from((ssize_t)fd_from, argv[1], -1, -1);
+
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, permissions);
 	test_file_to((ssize_t)fd_to, argv[2], fd_from, -1);
+
 	lenread = 1024;
+
 	while (lenread == 1024)
 	{
 		lenread = read(fd_from, buf, 1024);
@@ -110,8 +114,10 @@ int main(int argc, char *argv[])
 			lenwrite = -1;
 		test_file_to(lenwrite, argv[2], fd_from, fd_to);
 	}
+
 	close_to = close(fd_to);
 	close_from = close(fd_from);
+
 	test_good_close(close_to, fd_to);
 	test_good_close(close_from, fd_from);
 	return (0);

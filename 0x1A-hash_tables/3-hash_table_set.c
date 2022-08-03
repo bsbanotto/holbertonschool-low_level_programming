@@ -56,19 +56,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	newNode = (ht->array)[index];
 
-	while (newNode != NULL)
+	while (newNode == NULL)
 	{	
-		free(newNode->value);
-		newNode->value = strdup(value);
-		printf("Success with a collision\n");
+		printf("Success with no collision\n");
+		insertNode = new_hash_node(key, value);
+		if (insertNode == NULL)
+			return (0);
+		insertNode->next = ht->array[index];
+		ht->array[index] = insertNode;
 		return (1);
-		newNode = newNode->next;
 	}
-	printf("Success with no collision\n");
-	insertNode = new_hash_node(key, value);
-	if (insertNode == NULL)
-		return (0);
-	insertNode->next = ht->array[index];
-	ht->array[index] = insertNode;
+	free(newNode->value);
+	newNode->value = strdup(value);
+	printf("Success with a collision\n");
+	newNode = newNode->next;
 	return (1);
 }

@@ -20,7 +20,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (newHashTable == NULL)
 		return (NULL);
 
-	hashNodeArray = malloc(sizeof(hashNodeArray) * size);
+	hashNodeArray = malloc(sizeof(hash_node_t *) * size);
 	if (hashNodeArray == NULL)
 	{
 		free(newHashTable);

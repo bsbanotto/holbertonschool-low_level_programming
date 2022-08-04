@@ -22,7 +22,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (finder == NULL)
 		return (NULL);
 
-	while (finder != NULL)
+	while (finder)
 	{
 		if (strcmp(finder->key, key) == 0)
 			return (finder->value);

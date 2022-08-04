@@ -13,11 +13,14 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int index;
 	hash_node_t *finder;
 
-	if (!ht || !(ht->array) || !key|| ht->size == 0 || strlen(key) == 0)
+	if (!ht || !(ht->array) || !key || ht->size == 0 || strlen(key) == 0)
 		return (NULL);
 
 	index = key_index((const unsigned char *)key, ht->size);
 	finder = ht->array[index];
+
+	if(finder == NULL)
+		return (NULL);
 
 	while (finder != NULL)
 	{

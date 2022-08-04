@@ -47,18 +47,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 
 	if (!ht || !(ht->array) || !key || strlen(key) == 0 || !value)
-	{
-		printf("FAILURE!!\n");
 		return (0);
-	}
 
 	index = key_index((const unsigned char *)key, ht->size);
 
 	newNode = (ht->array)[index];
 
 	while (newNode == NULL)
-	{	
-		printf("Success with no collision\n");
+	{
 		insertNode = new_hash_node(key, value);
 		if (insertNode == NULL)
 			return (0);
@@ -68,7 +64,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	free(newNode->value);
 	newNode->value = strdup(value);
-	printf("Success with a collision\n");
 	newNode = newNode->next;
 	return (1);
 }

@@ -53,28 +53,19 @@ int binary_search_recursive(int *array, int start, int end, int value)
 {
 	int mid;
 
-	sleep(1);
-
-	/* print_array(array, start, end); */
-
 	if (end >= start)
 	{
 		mid = start + (end - start) / 2;
-		/*printf("Mid: %d\t", mid);*/
 		print_array(array, start, end);
 		if (value == array[mid])
 			return (mid);
 
 		if (value < array[mid])
 		{
-			/*printf("value < array[mid]\t");*/
-			/*print_array(array, start, end);*/
 			return (binary_search_recursive(array, start, mid - 1, value));
 		}
 		if (value > array[mid])
 		{
-			/*printf("value > array[mid]\t");*/
-			/*print_array(array, start, end);*/
 			return (binary_search_recursive(array, mid + 1, end, value));
 		}
 	}

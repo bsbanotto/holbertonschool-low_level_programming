@@ -78,8 +78,7 @@ void print_all(const char * const format, ...)
 		{'c', print_char},
 		{'i', print_int},
 		{'f', print_float},
-		{'s', print_string},
-		{'\0', NULL}
+		{'s', print_string}
 	};
 
 	va_start(list, format);
@@ -90,7 +89,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-			if (data_type[j].choice1 == format[i])
+			if (data_type[j].choice == format[i])
 			{
 				printf("%s", separator);
 				data_type[j].func(list);

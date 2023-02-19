@@ -17,14 +17,14 @@ int _putchar(char c);
 
 
 /**
- * struct choice - Choice structure
- * @option: letter passed in first argument
+ * struct choiceStruct - Choice structure
+ * @choice: letter passed in first argument
  * @func: pointer to appropriate function
  */
 
 typedef struct choiceStruct
 {
-	char choice1;
+	char choice;
 	void (*func)(va_list);
 } choiceStruct;
 

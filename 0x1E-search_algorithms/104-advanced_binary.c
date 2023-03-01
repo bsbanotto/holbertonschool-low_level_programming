@@ -56,9 +56,7 @@ int binary_search_recursive(int *array, int start, int end, int value)
 	if (end >= start)
 	{
 		if (end == start && value == array[end])
-			{
-				return (end);
-			}
+			return (end);
 		mid = start + (end - start) / 2;
 		print_array(array, start, end);
 

@@ -13,4 +13,6 @@ void print_array(int *array, int start, int end);
 
 int binary_search_recursive(int *array, int start, int end, int value);
 
+int advanced_binary(int *array, size_t size, int value);
+
 #endif

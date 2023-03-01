@@ -53,19 +53,21 @@ int binary_search_recursive(int *array, int start, int end, int value)
 {
 	int mid;
 
-	sleep(1);
-
 	if (end >= start)
 	{
+		if (end == start)
+			{
+				return (end);
+			}
 		mid = start + (end - start) / 2;
 		print_array(array, start, end);
 
 		if (value <= array[mid])
 		{
-			if (end == start)
+/*			if (end == start)
 			{
 				return (end);
-			}
+			}*/
 			return (binary_search_recursive(array, start, mid, value));
 		}
 		if (value > array[mid])

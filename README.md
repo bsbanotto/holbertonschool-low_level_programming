@@ -2,8 +2,8 @@
 This repo contains projects for learning low level programming in C at Holberton School.
 
 <div align=center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" height=200 width=200>
-</div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" height=200 width=200>
+    </div>
 &nbsp;  
 &nbsp;  
 

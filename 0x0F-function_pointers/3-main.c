@@ -30,13 +30,15 @@ int main(int argc, char *argv[])
 
 	if (func_ptr == NULL)
 	{
-		printf("Error\n");
+		printf("Operator must be +, -, /, * or %%\n");
+		printf("Proper usage: ./calc 5 + 2\n");
 		exit(99);
 	}
 
 	if ((*argv[2] == '/' || *argv[2] == '%') && number2 == 0)
 	{
-		printf("Error\n");
+		printf("Divide by Zero error\n");
+		printf("When operator is / or %%, second integer cannot be zero\n");
 		exit(100);
 	}
 
